@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mill-reef.clients.site/sitemap.xml
