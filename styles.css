@@ -3135,3 +3135,134 @@ h1 em {
     border-bottom: 1px solid var(--line-light);
   }
 }
+
+/* Final phone overrides stay last so newer page styles cannot undo them. */
+@media (max-width: 680px) {
+  body {
+    padding-bottom: calc(58px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .shell > *,
+  .page-hero-content > *,
+  .case-grid,
+  .case-card,
+  .case-card-media,
+  .case-card-copy,
+  .home-service-link > div {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  .button,
+  .text-link,
+  .eyebrow {
+    max-width: 100%;
+  }
+
+  .button {
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .main-nav {
+    height: calc(100dvh - 70px);
+    overflow-y: auto;
+    padding-bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+  }
+
+  .page-hero {
+    min-height: 690px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(2.75rem, 12.6vw, 3.8rem);
+    line-height: 0.86;
+    overflow-wrap: normal;
+  }
+
+  .page-hero-bottom,
+  .page-hero-bottom p {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page-hero-index {
+    right: 0;
+  }
+
+  .breadcrumbs {
+    flex-wrap: wrap;
+  }
+
+  .home-service-link {
+    grid-template-columns: 34px minmax(0, 1fr) 38px;
+  }
+
+  .home-service-link h3 {
+    overflow-wrap: anywhere;
+  }
+
+  .case-grid,
+  .case-card,
+  .case-card-media,
+  .case-card-copy {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .case-card-copy {
+    padding: 28px 24px;
+  }
+
+  .footer-phone {
+    max-width: 100%;
+    font-size: clamp(1.45rem, 7.5vw, 1.7rem);
+  }
+
+  .mobile-dock {
+    min-height: calc(58px + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+}
+
+@media (max-width: 360px) {
+  .brand-copy small {
+    letter-spacing: 0.12em;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.85rem, 20vw, 4.2rem);
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .page-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .home-service-link {
+    grid-template-columns: 30px minmax(0, 1fr) 34px;
+    gap: 10px;
+  }
+
+  .home-service-link h3 {
+    font-size: 1.55rem;
+  }
+
+  .contact-list > div {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .estimate-form,
+  .review-card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
